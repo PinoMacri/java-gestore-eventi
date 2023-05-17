@@ -42,7 +42,7 @@ public class ProgrammiEventi {
 
 	public String getElencoEventiOrdinatiPerData() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("Titolo del programma: ").append(titolo).append("\n");
+		sb.append(titolo).append("\n");
 		Collections.sort(eventi, Comparator.comparing(Evento::getData));
 		DateTimeFormatter dateFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		for (Evento evento : eventi) {
